@@ -1,4 +1,5 @@
-var turno = false;
+var turno = false; //false = X
+var fimJogo = false;
 var jogador;
 
 function passaTurno(){
@@ -38,19 +39,20 @@ function verificafimDeJogo(){
 
     if( casasIguais(btn1, btn2, btn3) || casasIguais(btn4, btn5, btn6) || casasIguais(btn7, btn8, btn9) || casasIguais(btn1, btn4, btn7) || 
         casasIguais(btn2, btn5, btn8) || casasIguais(btn3, btn6, btn9) || casasIguais(btn1, btn5, btn9) || casasIguais(btn3, btn5, btn7)) {
+            fimJogo = true;
             result.innerHTML = "O Jogador " + jogador + " Venceu!";
         }
 
 }
 
 function fazerJogada(botao){
-    if(turno == false && event.which==1 && botao.innerHTML == "?"){
+    if(turno == false && event.which==1 && fimJogo == false && botao.innerHTML == "?"){
         botao.innerHTML = "X";
         verificafimDeJogo();
         passaTurno();
 
     }
-    else if(turno == true && event.which==3 && botao.innerHTML == "?"){
+    else if(turno == true && event.which==3 && fimJogo == false && botao.innerHTML == "?"){
         botao.innerHTML = "O";
         verificafimDeJogo();
         passaTurno();
@@ -73,6 +75,7 @@ function resetGame(){
     
     //Voltando ao estado inicial
     turno = false;
+    fimJogo = false;
     JogadordaVez.innerHTML = "Vez do jogador: X";
     btn1.innerHTML = "?";
     btn2.innerHTML = "?";
