@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Velha</title>
+    <script src="jogo_da_velha.js"></script>
+</head>
+<body>
+    <p id="turno"> <strong>Vez do Jogador: X </strong></p>
+    <pre>X = Mouse clique esquerdo  :  O = Mouse clique direito</pre>
+
+    <table id="tabela">
+        <tr>
+            <td><button id="btn1" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn2" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn3" onmouseup="fazerJogada(this)">?</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn4" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn5" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn6" onmouseup="fazerJogada(this)">?</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn7" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn8" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn9" onmouseup="fazerJogada(this)">?</button></td>
+        </tr>
+    </table>
+
+    <p id="resultado"></p>
+    <button id="reset"onmouseup="resetGame()">Reset</button>
+
+    
+</body>
+</html>
