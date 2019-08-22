@@ -48,14 +48,14 @@ function verificafimDeJogo(){
 function fazerJogada(botao){
     if(turno == false && event.which==1 && fimJogo == false && botao.innerHTML == "?"){
         botao.innerHTML = "X";
-        botao.style.backgroundColor="#f61600";
+        botao.style.backgroundColor="#f94847";
         verificafimDeJogo();
         passaTurno();
 
     }
     else if(turno == true && event.which==2 && fimJogo == false && botao.innerHTML == "?"){
         botao.innerHTML = "O";
-        botao.style.backgroundColor="#0046df";
+        botao.style.backgroundColor="#4880fe";
         verificafimDeJogo();
         passaTurno();
         
