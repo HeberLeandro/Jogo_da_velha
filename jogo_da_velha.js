@@ -101,7 +101,4 @@ function resetGame(){
     btn8.style.backgroundColor="#dedede";
     btn9.style.backgroundColor="#dedede";
     
-
-
-    
 }

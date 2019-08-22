@@ -1,0 +1,75 @@
+body {
+    background-color: black; 
+    margin: 0;
+    padding: 0;
+}
+
+
+#cima {
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    color: white;
+    /* background-color: white; */
+
+}
+#meio {
+    margin: auto;
+    width: 310px;
+    height: 310px;
+}
+#baixo {
+    margin: auto;
+    height: 110px;
+    text-align: center;
+}
+
+
+button.btnjogo {
+    width: 100px;
+    height: 100px;
+    border: none;
+    font-size: 60px;
+    border-radius: 10px;
+}
+#reset {
+    border: none;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: #07c9bb;
+    border-radius: 7px;
+    box-shadow:  0 5px 5px 0;
+    font-size: 17px;
+    /* margin-left: 40%; */
+}
+#turno {
+    font-size: 35px;
+    font: bolder;
+    color: white;
+    margin-top: 50px;
+    /* margin-left: 40%; */
+
+}
+#teclax {
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+    /* margin-left: 40%; */
+
+}
+
+#teclao {
+    font-size: 10px;
+    font-style: white;
+    margin-top: 10px;
+    /* margin-left: 40%; */
+}
+#resultado {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    margin-block-end: 10px;
+    /* margin-left: 40%; */
+
+}

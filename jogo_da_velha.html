@@ -6,67 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jogo da Velha</title>
     <script src="jogo_da_velha.js"></script>
-    <style>
-        /* table {
-            width: 200px;
-            height: 200px;
-        } */
-        body {
-            background-color: black; 
-        }
-        div {
-            margin-left: 40%;
-            margin-top: 10%;
-        }
-        button.btnjogo {
-            width: 100px;
-            height: 100px;
-            border: none;
-            font-size: 60px;
-            border-radius: 10px;
-        }
-        #reset {
-            border: none;
-            margin-top: 10px;
-            width: 100px;
-            height: 50px;
-            background-color: #07c9bb;
-            border-radius: 7px;
-            box-shadow:  0 5px 5px 0;
-            font-size: 17px;
-            margin-left: 40%;
-        }
-        #turno {
-            font-size: 30px;
-            color: white;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            margin-left: 40%;
-
-        }
-        #teclas {
-            font-size: 30px;
-            color: white;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            margin-left: 40%;
-
-        }
-        #resultado {
-            font-size: 30px;
-            color: white;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            margin-left: 40%;
-
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="jogo_da_velha.css"/>
 </head>
 <body>
-    <p id="turno"> Vez do Jogador: X </p>
-    <p id="teclas">X = Mouse clique esquerdo  :  O = Mouse clique meio</pre>
+    <div id="cima">
+        <p id="turno"> Vez do Jogador: X </p>
+        <p id="teclax"> X = Mouse clique esquerdo</p>
+        <p id="telcao"> O = Mouse clique meio</p>
+    </div>
 
-    <div>
+    <div id="meio">
         <table id="tabela">
             <tr>
                 <td><button id="btn1" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
@@ -85,10 +34,10 @@
             </tr>
         </table>
     </div>  
-
-    <p id="resultado"></p>
-    <button id="reset" onmouseup="resetGame()"><strong>Reiniciar</strong></button>
-
+    <div id="baixo">
+        <p id="resultado"></p>
+        <button id="reset" onmouseup="resetGame()"><strong>Reiniciar</strong></button>
+    </div>
 </body>
 
 
