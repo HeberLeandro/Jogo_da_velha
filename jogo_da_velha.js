@@ -6,11 +6,11 @@ function passaTurno(){
     var JogadordaVez = document.getElementById("turno");
 
     if(turno == false){
-        JogadordaVez.innerHTML = "Vez do jogador: O"
+        JogadordaVez.innerHTML = "Vez do Jogador: O"
         turno = true;
     }
     else {
-        JogadordaVez.innerHTML = "Vez do jogador: X"
+        JogadordaVez.innerHTML = "Vez do Jogador: X"
         turno = false;
     }
 }
@@ -40,7 +40,7 @@ function verificafimDeJogo(){
     if( casasIguais(btn1, btn2, btn3) || casasIguais(btn4, btn5, btn6) || casasIguais(btn7, btn8, btn9) || casasIguais(btn1, btn4, btn7) || 
         casasIguais(btn2, btn5, btn8) || casasIguais(btn3, btn6, btn9) || casasIguais(btn1, btn5, btn9) || casasIguais(btn3, btn5, btn7)) {
             fimJogo = true;
-            result.innerHTML = "O Jogador " + jogador + " Venceu!";
+            result.innerHTML = "O Jogador ' " + jogador + " ' Venceu!";
         }
 
 }
@@ -48,12 +48,14 @@ function verificafimDeJogo(){
 function fazerJogada(botao){
     if(turno == false && event.which==1 && fimJogo == false && botao.innerHTML == "?"){
         botao.innerHTML = "X";
+        botao.style.backgroundColor="#f61600";
         verificafimDeJogo();
         passaTurno();
 
     }
-    else if(turno == true && event.which==3 && fimJogo == false && botao.innerHTML == "?"){
+    else if(turno == true && event.which==2 && fimJogo == false && botao.innerHTML == "?"){
         botao.innerHTML = "O";
+        botao.style.backgroundColor="#0046df";
         verificafimDeJogo();
         passaTurno();
         
@@ -76,7 +78,7 @@ function resetGame(){
     //Voltando ao estado inicial
     turno = false;
     fimJogo = false;
-    JogadordaVez.innerHTML = "Vez do jogador: X";
+    JogadordaVez.innerHTML = "Vez do Jogador: X";
     btn1.innerHTML = "?";
     btn2.innerHTML = "?";
     btn3.innerHTML = "?";
@@ -87,4 +89,19 @@ function resetGame(){
     btn8.innerHTML = "?";
     btn9.innerHTML = "?";
     result.innerHTML = "";
+
+    //cor dos btns
+    btn1.style.backgroundColor="#dedede";
+    btn2.style.backgroundColor="#dedede";
+    btn3.style.backgroundColor="#dedede";
+    btn4.style.backgroundColor="#dedede";
+    btn5.style.backgroundColor="#dedede";
+    btn6.style.backgroundColor="#dedede";
+    btn7.style.backgroundColor="#dedede";
+    btn8.style.backgroundColor="#dedede";
+    btn9.style.backgroundColor="#dedede";
+    
+
+
+    
 }

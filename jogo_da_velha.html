@@ -6,32 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jogo da Velha</title>
     <script src="jogo_da_velha.js"></script>
+    <style>
+    /* table {
+        width: 200px;
+        height: 200px;
+    } */
+    button.btnjogo {
+        width: 100px;
+        height: 100px;
+        border: none;
+        font-size: 60px;
+    }
+    #reset {
+        margin-top: 10px;
+        width: 100px;
+        height: 50px;
+        background-color: #07c9bb;
+        border-radius: 7px;
+        box-shadow:  0 5px 5px 0;
+        font-size: 17px;
+    }
+    p {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-block-end: 10px;
+    }
+    </style>
 </head>
 <body>
-    <p id="turno"> <strong>Vez do Jogador: X </strong></p>
-    <pre>X = Mouse clique esquerdo  :  O = Mouse clique direito</pre>
+    <p id="turno"> Vez do Jogador: X </p>
+    <pre>X = Mouse clique esquerdo  :  O = Mouse clique meio</pre>
 
     <table id="tabela">
         <tr>
-            <td><button id="btn1" onmouseup="fazerJogada(this)">?</button></td>
-            <td><button id="btn2" onmouseup="fazerJogada(this)">?</button></td>
-            <td><button id="btn3" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn1" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn2" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn3" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
         </tr>
         <tr>
-            <td><button id="btn4" onmouseup="fazerJogada(this)">?</button></td>
-            <td><button id="btn5" onmouseup="fazerJogada(this)">?</button></td>
-            <td><button id="btn6" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn4" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn5" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn6" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
         </tr>
         <tr>
-            <td><button id="btn7" onmouseup="fazerJogada(this)">?</button></td>
-            <td><button id="btn8" onmouseup="fazerJogada(this)">?</button></td>
-            <td><button id="btn9" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn7" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn8" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
+            <td><button id="btn9" class="btnjogo" onmouseup="fazerJogada(this)">?</button></td>
         </tr>
     </table>
 
     <p id="resultado"></p>
-    <button id="reset"onmouseup="resetGame()">Reset</button>
+    <button id="reset" onmouseup="resetGame()"><strong>Reiniciar</strong></button>
 
-    
 </body>
+
+
 </html>
